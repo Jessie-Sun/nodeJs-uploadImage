@@ -1,0 +1,10 @@
+{
+    "name": "upload_image",
+    "version": "1.0.0",
+    "description": "NodeJs - upload image",
+    "main": "index.js",
+    "author": "Jessie Sun",
+    "dependencies": {
+        "formidable": "latest"
+    }
+}
