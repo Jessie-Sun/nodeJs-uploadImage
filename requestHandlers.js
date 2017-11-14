@@ -28,7 +28,11 @@ function upload(response, request) {
 	console.log("Request handler upload was called");
 
 	var form = new formidable.IncomingForm();
-	form.uploadDir = __dirname + '\\tmp';
+	
+	if(!fs.existsSync("./tmp")){
+		fs.mkdir('tmp');
+	}
+	form.uploadDir = './tmp';
 	console.log('about to parse');
 	form.parse(request, function(error, fields, files) {
 		console.log(util.inspect({error: error, fields: fields, files: files}));
